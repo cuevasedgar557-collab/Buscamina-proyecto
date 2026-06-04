@@ -1,0 +1,3 @@
+Edgard,0,Desafio,2026-06-03
+Juan,210,Campaña,2026-06-03
+Juan,80,Desafio,2026-06-03
