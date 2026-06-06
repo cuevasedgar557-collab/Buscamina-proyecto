@@ -74,7 +74,7 @@ while True:
                 while nivel <= 12 and continuar:
                     print(f"\n🧠 Nivel {nivel}")
 
-                    casillas = list(range(1, 26))
+                    casillas = list(range(1, 20))
                     minas = random.sample(casillas, nivel)
                     usadas = []
                     puntaje = 0
@@ -135,7 +135,7 @@ while True:
                 if minas_cantidad > 24:
                     minas_cantidad = 24
 
-                casillas = list(range(1, 26))
+                casillas = list(range(1, 20))
                 minas = random.sample(casillas, minas_cantidad)
                 usadas = []
                 puntaje = 0
