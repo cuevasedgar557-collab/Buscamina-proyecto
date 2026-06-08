@@ -221,5 +221,5 @@ while True:
                     print("Cerrando sesión....")
                     logueado = False
     elif opcion == "3":
-        print("Saliendo del juego...")
+        print("Saliendo del juego.........")
         break
