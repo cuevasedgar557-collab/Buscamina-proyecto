@@ -61,7 +61,8 @@ while True:
                     print("Modo Campaña seleccionado.")
                     nivel = 1
                     continuar = True
-                    puntaje = 0   
+                    puntaje = 0  
+                    nivel_final = 0
 
                     while nivel <= 12 and continuar:
                         print(f"\nNivel {nivel}")
@@ -90,20 +91,29 @@ while True:
                                 print("¡BOOM! Has perdido.")
                                 jugando = False
                                 continuar = False
+                                nivel_final = nivel
                             else:
                                 puntaje += 10 * nivel
                                 print(f"¡Bien hecho! Has ganado {puntaje} puntos.")
+                                if len(usadas) == len(casillas) - len(minas):
+                                    print("¡Has despejado todas las casillas seguras del nivel!")
+                                    jugando = False
+                                    nivel_final = nivel
 
                         if continuar:
                             nivel += 1   
 
+                    if nivel_final == 0:
+                        nivel_final = nivel - 1
                     fecha = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                     archivo = open ("partidas.txt", "a")
-                    archivo.write(f"{nombre},Campaña,{puntaje},{nivel},{fecha}\n")  
+                    archivo.write(f"{nombre},Campaña,{puntaje},{nivel_final},{fecha}\n")  
                     archivo.close()
 
                     if not continuar:
-                        print("Felicidades llegaste hasta el nivel " + str(nivel))
+                        print("Felicidades llegaste hasta el nivel " + str(nivel_final))
+                    else:
+                        print("¡Felicidades! Completaste los 12 niveles de la campaña.")
 
                 case "2":
                     minas_cantidad = input("Ingrese la cantidad de minas (1-24):")
