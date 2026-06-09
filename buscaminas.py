@@ -184,7 +184,7 @@ while True:
                         for i in range(min(5, len(ranking_desafio))):
                             print(f"Desafío - {i+1}. {ranking_desafio[i][0]}: {ranking_desafio[i][1]} puntos")
                     except:
-                        print("NO hay partidas registradas")
+                        print("No hay partidas registradas")
 
                 case "4":
                     try:
