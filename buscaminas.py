@@ -74,13 +74,13 @@ while True:
                         while jugando:
                             disponible = [x for x in casillas if x not in usadas]
                             print(f"Casillas disponibles: {disponible}")
-                            seleccion  = input("Elige un nuero: ")
+                            seleccion  = input("Elige un número: ")
                             if not seleccion.isdigit():
                                 print("Por favor, ingrese un número válido.")
                                 continue
                             seleccion = int(seleccion)
                             if seleccion not in casillas:
-                                print("Numero fuera de rango por favor elija un numero entre 1 y 16.")
+                                print("Número fuera de rango por favor elija un número entre 1 y 16.")
                                 continue
 
                             if seleccion in usadas:
@@ -129,13 +129,13 @@ while True:
                     while jugando:
                         disponible = [x for x in casillas if x not in usadas]
                         print(f"Casillas disponibles: {disponible}")
-                        seleccion  = input("Elige un nuero")
+                        seleccion  = input("Elige un número: ")
                         if not seleccion.isdigit():
                             print("Por favor, ingrese un número válido.")
                             continue
                         seleccion = int(seleccion)
                         if seleccion not in casillas:
-                            print("Numero fuera de rango por favor elija un numero entre 1 y 25.")
+                            print("Número fuera de rango por favor elija un número entre 1 y 25.")
                             continue
 
                         if seleccion in usadas:
