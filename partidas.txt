@@ -3,8 +3,14 @@ Edgard,Campaña,10,1,2026-06-08 15:30:32
 Edgard,Campaña,20,1,2026-06-08 15:32:32
 Edgard,Campaña,20,1,2026-06-08 15:32:41
 Edgard,Campaña,60,1,2026-06-08 15:33:00
+<<<<<<< Updated upstream
 Selva,Campa�a,70,1,2026-06-09 15:18:20
 Selva,Desafio,20,15,2026-06-09 15:18:34
 Marlon,Desafio,10,12,2026-06-09 15:24:40
 Selva,Desafio,30,12,2026-06-09 15:29:13
 Selva,Desafio,40,2,2026-06-09 15:34:51
+=======
+Edgard,Campaña,40,1,2026-06-08 16:04:55
+Edgard,Campaña,50,1,2026-06-08 16:05:31
+Edgard,Campaña,100,1,2026-06-08 16:05:58
+>>>>>>> Stashed changes
