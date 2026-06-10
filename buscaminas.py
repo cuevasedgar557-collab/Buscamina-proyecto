@@ -155,36 +155,41 @@ while True:
 
                 case "3":
                     try:
-                        archivo = open("partidas.txt", "r")
+                        archivo = open("partidas.txt", "r", encoding="utf-8")
                         lineas = archivo.readlines()
                         archivo.close()
 
                         ranking_campana = []
                         ranking_desafio = []
-                        
-                        for linea in lineas:
-                            datos = linea.strip().split(",")
-                            usuario = datos[0]        
-                            modo = datos[1]           
-                            puntos = int(datos[2])    
 
-                            if modo == "Campaña":
+                        for linea in lineas:
+                            if linea.strip() == "":
+                                continue
+
+                            datos = linea.strip().split(",")
+
+                            usuario = datos[0]
+                            modo = datos[1]
+                            puntos = int(datos[2])
+
+                            if modo.startswith("Campa"):
                                 ranking_campana.append((usuario, puntos))
                             else:
                                 ranking_desafio.append((usuario, puntos))
 
-                        ranking_campana.sort(key = lambda x: x[1], reverse= True)
-                        ranking_desafio.sort(key = lambda x: x[1], reverse = True)
+                        ranking_campana.sort(key=lambda x: x[1], reverse=True)
+                        ranking_desafio.sort(key=lambda x: x[1], reverse=True)
 
-                        print("\n Ranking de jugadores de modo Campaña:")
+                        print("\nRanking de jugadores de modo Campaña:")
                         for i in range(min(5, len(ranking_campana))):
                             print(f"Campaña - {i+1}. {ranking_campana[i][0]}: {ranking_campana[i][1]} puntos")
 
-                        print("\n Ranking de jugadores de modo Desafío:" )
+                        print("\nRanking de jugadores de modo Desafío:")
                         for i in range(min(5, len(ranking_desafio))):
                             print(f"Desafío - {i+1}. {ranking_desafio[i][0]}: {ranking_desafio[i][1]} puntos")
-                    except:
-                        print("No hay partidas registradas")
+
+                    except Exception as e:
+                        print("Error:", e)
 
                 case "4":
                     try:
